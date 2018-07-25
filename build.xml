@@ -1,0 +1,64 @@
+<project basedir="." name="CareerIT" default="execute.test">
+
+	<property name="sitebase" value="." />
+	<property name="build" location="${sitebase}/build" />
+	<property name="test-classes" value="${build}/test-classes" />
+	<property name="test-output" value="${build}/test-output" />
+
+	<property name="lib" location="lib" />
+
+	<property name="src" location="${sitebase}/src" />
+	
+	<path id="build.classpath">
+		<fileset dir="${lib}">
+			<include name="selenium-server-standalone-3.8.1.jar" />
+			<include name="testng-6.3.1.jar" />
+			<include name="poi-3.17.jar"/>
+			<include name="poi-ooxml-3.17.jar"/>
+			<include name="poi-ooxml-schemas-3.17.jar"/>
+			<include name="xmlbeans-2.6.0.jar"/>
+			<include name="commons-collections4-4.1.jar"/>
+			<include name="mail-1.4.7.jar"/>
+		</fileset>
+	</path>
+
+	<target name="init">
+		<mkdir dir="${build}" />
+		<mkdir dir="${test-classes}" />
+		<mkdir dir="${test-output}" />
+	</target>
+
+	<target name="clean">
+		<delete dir="${build}" failonerror="false" />
+	</target>
+
+	<target name="compile" depends="clean,init">
+		<javac destdir="${test-classes}" classpathref="build.classpath"
+			debug="true" target="1.7" encoding="iso-8859-1">
+
+			<src path="${src}" />
+
+		</javac>
+
+	</target>
+
+	<taskdef name="testng" classname="org.testng.TestNGAntTask">
+		<classpath>
+			<pathelement location="${lib}/testng-6.3.1.jar" />
+		</classpath>
+	</taskdef>
+
+	<target name="testng.run" depends="compile">
+		<java classname="com.careerit.web.utils.TestNGRunUtils" classpathref="build.classpath" classpath="${test-classes}">
+			<sysproperty key="java.util.logging.config.file" value="logging.properties"/>
+		</java>
+	</target>
+	
+	<target name="execute.test" depends="testng.run">
+			<java classname="com.careerit.web.utils.JavaMailUtils" classpathref="build.classpath" classpath="${test-classes}">
+				<sysproperty key="java.util.logging.config.file" value="logging.properties"/>
+			</java>
+	</target>
+	
+
+</project>

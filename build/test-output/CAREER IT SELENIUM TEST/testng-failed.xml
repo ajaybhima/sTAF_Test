@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [CAREER IT SELENIUM TEST]" parallel="methods">
+  <test name="CAREER IT SELENIUM AUTOMATION(failed)" parallel="methods" preserve-order="true">
+    <groups>
+      <run>
+        <include name="SmokeTest"/>
+      </run>
+    </groups>
+    <classes>
+      <class name="com.careerit.web.tests.WikiPediaTests">
+        <methods>
+          <include name="WikiHOmeTestCase_04"/>
+          <include name="WikiHOmeTestCase_03"/>
+          <include name="WikiHOmeTestCase_02"/>
+          <include name="WikiHOmeTestCase_05"/>
+          <include name="WikiHOmeTestCase_01"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>
