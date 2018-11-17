@@ -10,6 +10,7 @@ public class FileConfigUtils {
 	
 	
 	public static Properties initialize(String filePath)  {
+		System.out.println("Read Config File");
 		SortedProperties testdataConfig = new SortedProperties();
 		try {
 			testdataConfig.load(new FileInputStream(filePath));
