@@ -8,6 +8,8 @@ import com.careerit.web.pages.WikiHomePage;
 import com.careerit.web.utils.*;
 
 public class WikiPediaTests {
+
+
 	
 	@Test (groups={"SmokeTest","RegressionTest"})
 	public void WikiHOmeTestCase_01() throws Exception{
