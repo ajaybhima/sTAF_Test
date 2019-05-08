@@ -15,6 +15,7 @@ public class WikiHomePage {
 	ElementLocator searchBox= new ElementLocator("searck-box", "//input[@id='searchInput']", ElementLocator.XPATH);
 	ElementLocator langDropdown= new ElementLocator("Language-dropdown", "//div[@id='search-input']/div/div/select[@id='searchLanguage']", ElementLocator.XPATH);
 	ElementLocator searchButton= new ElementLocator("searck-Button", "//button[@class='pure-button pure-button-primary-progressive']", ElementLocator.XPATH);
+	ElementLocator searchButton2= new ElementLocator("searck-Button", "//button[@class='pure-button pure-button-primary-progressive']", ElementLocator.XPATH);
 	
 	
 	private WebDriver driver;
