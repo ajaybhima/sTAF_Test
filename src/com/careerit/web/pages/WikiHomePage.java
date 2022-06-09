@@ -18,6 +18,7 @@ public class WikiHomePage {
 	ElementLocator searchButton2= new ElementLocator("searck-Button", "//button[@class='pure-button pure-button-primary-progressive']", ElementLocator.XPATH);
 	
 	
+
 	private WebDriver driver;
 	
 	public WikiHomePage(WebDriver driver) {
