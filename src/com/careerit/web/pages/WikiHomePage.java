@@ -29,7 +29,7 @@ public class WikiHomePage {
 		TestNGRunUtils.reportLog("Enter search key - "+searchKey);
 		SeleniumUtils.waitForElement(driver, searchBox);
 		WebElement searchInput=driver.findElement(By.xpath(searchBox.getelementValue()));
-			
+		System.out.println("Enter search key - "+searchKey);	
 		searchInput.clear();
 		searchInput.sendKeys(searchKey);
 		searchInput.sendKeys(Keys.TAB);
