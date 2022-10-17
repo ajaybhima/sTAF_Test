@@ -26,6 +26,7 @@ public class WikiHomePage {
 	}
 	
 	public WikiHomePage enterSearchKey(String searchKey){
+		System.out.println("New Change");
 		TestNGRunUtils.reportLog("Enter search key - "+searchKey);
 		SeleniumUtils.waitForElement(driver, searchBox);
 		WebElement searchInput=driver.findElement(By.xpath(searchBox.getelementValue()));
