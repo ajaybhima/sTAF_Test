@@ -34,6 +34,7 @@ public class WikiHomePage {
 		searchInput.clear();
 		searchInput.sendKeys(searchKey);
 		searchInput.sendKeys(Keys.TAB);
+		System.out.println("Search Key has beeen entered");
 		return this;
 	}
 	public WikiHomePage selectLanguage(String lang){
