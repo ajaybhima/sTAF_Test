@@ -16,6 +16,7 @@ public class WikiHomePage {
 	ElementLocator langDropdown= new ElementLocator("Language-dropdown", "//div[@id='search-input']/div/div/select[@id='searchLanguage']", ElementLocator.XPATH);
 	ElementLocator searchButton= new ElementLocator("searck-Button", "//button[@class='pure-button pure-button-primary-progressive']", ElementLocator.XPATH);
 	ElementLocator searchButton2= new ElementLocator("searck-Button", "//button[@class='pure-button pure-button-primary-progressive']", ElementLocator.XPATH);
+	ElementLocator searchButton3= new ElementLocator("searck-Button", "//button[@class='pure-button pure-button-primary-progressive']", ElementLocator.XPATH);
 	
 	
 
